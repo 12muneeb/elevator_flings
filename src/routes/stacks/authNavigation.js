@@ -20,7 +20,7 @@ const RootStack = createNativeStackNavigator();
 const AuthNavigation = ({initialRoute}) => {
   return (
     <RootStack.Navigator
-      initialRouteName={'PreLogin'}
+      initialRouteName={'Login'}
       screenOptions={{
         headerShown: false,
         headerTransparent: true,

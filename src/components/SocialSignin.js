@@ -2,7 +2,7 @@
 // npm i @react-native-firebase/app @react-native-firebase/auth
 
 import Toast from 'react-native-toast-message';
-// import Auth from '@react-native-firebase/auth';
+import Auth from '@react-native-firebase/auth';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 // import {AccessToken, LoginManager, Settings} from 'react-native-fbsdk-next';
 import {appleAuth} from '@invertase/react-native-apple-authentication';
@@ -33,6 +33,7 @@ const Google = async () => {
     await GoogleSignin.signOut();
     return socialUser;
   } catch (error) {
+    console.log('objectdsfsdf',error)
     Toast.show({
       text1: 'Unable sign in with Google',
       type: 'error',

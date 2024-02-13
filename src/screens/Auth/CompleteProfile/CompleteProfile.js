@@ -218,7 +218,7 @@ class CompleteProfile extends Component {
               </View>
 
               {galleryDocuments?.length > 0 ? (
-                <View style={{ height: 60, backgroundColor: 'red', width: '90%' }}>
+                <View style={{ height: 60,  }}>
                   <ScrollView
                     style={styles.mainCont}
                     horizontal={true}
@@ -237,7 +237,7 @@ class CompleteProfile extends Component {
                                   src={appIcons.close}
                                   resizeMode={'contain'}
                                   style={{ width: 8, height: 8 }}
-                                  tintColor={colors.white}
+                                  tintColor={colors.red}
                                 />
                               </TouchableOpacity>
                             </View>

@@ -10,10 +10,11 @@ import CustomButton from '../../../components/CustomButton';
 import CustomText from '../../../components/CustomText';
 import Img from '../../../components/Img';
 import NavService from '../../../helpers/NavService';
-import { signUpUser } from '../../../redux/actions/authAction';
+import { signUpUser,socialSignin } from '../../../redux/actions/authAction';
 import { colors, family, size } from '../../../utils';
 import styles from './styles';
-
+import { getDeviceToken } from '../../../redux/actions/appAction';
+import SocialSignin from '../../../components/SocialSignin';
 class Signup extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +28,24 @@ class Signup extends Component {
 
   render() {
     const { email, password, confirmPassword } = this.state;
+    const proceedSocialLogin = async socialType => {
+      const fcmToken = await getDeviceToken();
+      if (socialType == 'google') {
+        const userDetails = await SocialSignin?.Google();
+        if (userDetails) {
+          let payload = {
+            social_token: userDetails?.uid,
+            social_type: userDetails?.socialType,
+            device_type: Platform.OS,
+            device_token: fcmToken,
+            user_type: 'user',
+          };
+          console.log(payload, 'payloadpayload');
+          this.props.socialSignin(payload,userDetails?.userData?.email);
+          
+        }
+      } 
+    };
     const onSubmit = () => {
       if (!email) {
         Toast.show({
@@ -73,6 +92,9 @@ class Signup extends Component {
 
     const OnCreate = () => {
       NavService.navigate('Login');
+    }
+    const onSocial = () => {
+      proceedSocialLogin('google')
     }
   
     return (
@@ -180,7 +202,7 @@ class Signup extends Component {
                         <TouchableOpacity style={styles.imgtouchable} activeOpacity={0.8}>
                           <Img local src={appImages.facebook} resizeMode={'contain'} style={styles.img} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.imgtouchable} activeOpacity={0.8}>
+                        <TouchableOpacity style={styles.imgtouchable} activeOpacity={0.8} onPress={onSocial}>
                           <Img local src={appImages.google} resizeMode={'contain'} style={styles.img} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.imgtouchable} activeOpacity={0.8}>
@@ -198,5 +220,5 @@ class Signup extends Component {
   }
 }
 
-const actions = { signUpUser };
+const actions = { signUpUser,socialSignin };
 export default connect(null, actions)(Signup);

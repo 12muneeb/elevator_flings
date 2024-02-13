@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
 
 
   mainCont: {
-    width: '90%',
+    marginHorizontal:16
   },
   documentContainer: {
     width: 85,

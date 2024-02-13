@@ -496,7 +496,7 @@ function* userLogout() {
 
 export default function* root() {
   yield fork(login);
-  // yield fork(socialSignin);
+  yield fork(socialSignin);
   yield fork(completeProfile);
   // yield fork(updateProfile);
   // yield fork(deleteUserAccount);

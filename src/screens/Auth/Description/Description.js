@@ -233,70 +233,40 @@ export class Description extends Component {
               dropdownTextStyles={{ color: colors.lightGray }}
               inputStyles={styles.inputStyles}
             />
-            <CTextfield
-              secureTextEntry={false}
-              inputLabel='Career'
-              placeholderTextColor={colors.gray}
-              mode={'outlined'}
-              multiLine={false}
-              numberOfLines={1}
-              iconColor={colors.primary}
-              outlineColor={colors.gray}
-              bgColor={{ backgroundColor: colors.gray }}
-              activeOutlineColor={colors.primary}
-              toggleSecure
-              values={career}
-              keyboardType='number-pad'
-              onChangeText={(text) => this.setState({ career: text })}
-            />
-            <CTextfield
-              secureTextEntry={false}
-              inputLabel='Weight'
-              placeholderTextColor={colors.gray}
-              mode={'outlined'}
-              multiLine={false}
-              numberOfLines={1}
-              iconColor={colors.primary}
-              outlineColor={colors.gray}
-              bgColor={{ backgroundColor: colors.gray }}
-              activeOutlineColor={colors.primary}
-              toggleSecure
-              values={weight}
-              keyboardType='number-pad'
-              onChangeText={(text) => this.setState({ weight: text })}
-            />
-            <CTextfield
-              secureTextEntry={false}
-              inputLabel='Height'
-              placeholderTextColor={colors.gray}
-              mode={'outlined'}
-              multiLine={false}
-              numberOfLines={1}
-              iconColor={colors.primary}
-              outlineColor={colors.gray}
-              bgColor={{ backgroundColor: colors.gray }}
-              activeOutlineColor={colors.primary}
-              toggleSecure
-              values={height}
-              keyboardType='number-pad'
-              onChangeText={(text) => this.setState({ height: text })}
-            />
-            <CTextfield
-              secureTextEntry={false}
-              inputLabel='Networth'
-              placeholderTextColor={colors.gray}
-              mode={'outlined'}
-              multiLine={false}
-              numberOfLines={1}
-              iconColor={colors.primary}
-              outlineColor={colors.gray}
-              bgColor={{ backgroundColor: colors.gray }}
-              activeOutlineColor={colors.primary}
-              toggleSecure
-              values={networth}
-              keyboardType='number-pad'
-              onChangeText={(text) => this.setState({ networth: text })}
-            />
+        
+                <CustomTextInput
+                  placeholder={'Career'}
+                  value={career}
+                  keyboardType={'numeric'}
+                  placeholderColor={colors.lightGray}
+                  inputStyle={{ color: colors.lightGray }}
+                  onChangeText={value => this.setState({ career: value })}
+                />
+              <CustomTextInput
+                  placeholder={'Weight'}
+                  value={weight}
+                  keyboardType={'numeric'}
+                  placeholderColor={colors.lightGray}
+                  inputStyle={{ color: colors.lightGray }}
+                  onChangeText={value => this.setState({ weight: value })}
+                />
+                    <CustomTextInput
+                  placeholder={'Height'}
+                  value={height}
+                  keyboardType={'numeric'}
+                  placeholderColor={colors.lightGray}
+                  inputStyle={{ color: colors.lightGray }}
+                  onChangeText={value => this.setState({ height: value })}
+                />
+                     <CustomTextInput
+                  placeholder={'Networth'}
+                  value={networth}
+                  keyboardType={'numeric'}
+                  placeholderColor={colors.lightGray}
+                  inputStyle={{ color: colors.lightGray }}
+                  onChangeText={value => this.setState({ networth: value })}
+                />
+          
             <CustomButton
               title="Continue"
               onPress={onSubmit}

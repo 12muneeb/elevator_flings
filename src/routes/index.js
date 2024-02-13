@@ -80,11 +80,12 @@ class MainNavigation extends Component {
   }
   render() {
     const loggedInUser = this.props?.user;
+    console.log('dfsdfsdfsdf',loggedInUser)
     const verificationPopUp = this.props?.verificationPopUp;
     return (
       <NavigationContainer ref={ref => NavService.setTopLevelNavigator(ref)}>
         <View style={styles.container}>
-          {loggedInUser ? (
+          {loggedInUser  ? (
             <AppNavigation initialRoute={undefined} />
           ) : (
             <AuthNavigation initialRoute={undefined} />

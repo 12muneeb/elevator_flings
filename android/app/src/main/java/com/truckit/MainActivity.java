@@ -1,4 +1,4 @@
-package com.elevatorflings;
+package com.appsnado.demo;
 import android.os.Bundle; // here
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

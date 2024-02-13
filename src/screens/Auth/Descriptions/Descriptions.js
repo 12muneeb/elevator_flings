@@ -12,6 +12,7 @@ import { colors, family } from '../../../utils'
 import { styles } from './styles'
 import { connect } from 'react-redux'
 import { completeProfile } from '../../../redux/actions/authAction'
+import CustomTextInput from '../../../components/CustomTextInput'
 export class Descriptions extends Component {
     constructor(props) {
         super(props)
@@ -127,56 +128,34 @@ export class Descriptions extends Component {
             <CustomBackground titleText={'Description'} showLogo={false} skip>
                 <View style={[styles.container, { marginTop: 80 }]}>
                     <View style={{ marginHorizontal: 20 }}>
-
-                        <CTextfield
-                            secureTextEntry={false}
-                            inputLabel='Body type'
-                            placeholderTextColor={colors.gray}
-                            mode={'outlined'}
-                            multiLine={false}
-                            numberOfLines={1}
-                            iconColor={colors.primary}
-                            outlineColor={colors.gray}
-                            bgColor={{ backgroundColor: colors.gray }}
-                            activeOutlineColor={colors.primary}
-                            toggleSecure
-                            values={bodytype}
-                            keyboardType='default'
-                            onChangeText={(text) => this.setState({ bodytype: text })}
-                        />
-                        <CTextfield
-                            secureTextEntry={false}
-                            inputLabel='Hair color'
-                            placeholderTextColor={colors.gray}
-                            mode={'outlined'}
-                            multiLine={false}
-                            numberOfLines={1}
-                            iconColor={colors.primary}
-                            outlineColor={colors.gray}
-                            bgColor={{ backgroundColor: colors.gray }}
-                            activeOutlineColor={colors.primary}
-                            toggleSecure
-                            values={haircolor}
-                            keyboardType='default'
-                            onChangeText={(text) => this.setState({ haircolor: text })}
-                        />
-                        <CTextfield
-                            secureTextEntry={false}
-                            inputLabel='Eye Color'
-                            placeholderTextColor={colors.gray}
-                            mode={'outlined'}
-                            multiLine={false}
-                            numberOfLines={1}
-                            iconColor={colors.primary}
-                            outlineColor={colors.gray}
-                            bgColor={{ backgroundColor: colors.gray }}
-                            activeOutlineColor={colors.primary}
-                            toggleSecure
-                            values={eyecolor}
-                            keyboardType='default'
-                            onChangeText={(text) => this.setState({ eyecolor: text })}
-                        />
+                 
+                      
                         <View style={{ gap: 15, marginTop: 15 }}>
+                        <CustomTextInput
+                  placeholder={'Body type'}
+                  value={bodytype}
+                  keyboardType={'default'}
+                  placeholderColor={colors.lightGray}
+                  inputStyle={{ color: colors.lightGray }}
+                  onChangeText={value => this.setState({ bodytype: value })}
+                />
+                   <CustomTextInput
+                  placeholder={'Hair color'}
+                  value={haircolor}
+                  keyboardType={'default'}
+                  placeholderColor={colors.lightGray}
+                  inputStyle={{ color: colors.lightGray }}
+                  onChangeText={value => this.setState({ haircolor: value })}
+                />
+                    <CustomTextInput
+                  placeholder={'Eye Color'}
+                  value={eyecolor}
+                  keyboardType={'default'}
+                  placeholderColor={colors.lightGray}
+                  inputStyle={{ color: colors.lightGray }}
+                  onChangeText={value => this.setState({ eyecolor: value })}
+                />
+                       
                             <SelectList
                                 setSelected={selected =>
                                     this.setState({ selected: piercingData[selected]?.value })
