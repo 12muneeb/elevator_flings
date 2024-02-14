@@ -116,7 +116,6 @@ const styles = StyleSheet.create({
 
 
   mainCont: {
-    marginHorizontal:16,
     maxHeight:60
   },
   documentContainer: {
@@ -149,7 +148,7 @@ const styles = StyleSheet.create({
     fontSize: size.xxsmall,
   },
   imageBtn: {
-    width: 350,
+    width: 370,
     height: 130,
     borderRadius: 10,
     alignItems: 'center',

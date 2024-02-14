@@ -17,14 +17,14 @@ import {
   LogBox,
   StyleSheet,
 } from 'react-native';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {PersistGate} from 'redux-persist/integration/react';
-import Toast, {BaseToast, ErrorToast} from 'react-native-toast-message';
-import {Provider} from 'react-redux';
-import store, {persistor} from './src/redux';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { PersistGate } from 'redux-persist/integration/react';
+import Toast, { BaseToast, ErrorToast } from 'react-native-toast-message';
+import { Provider, useSelector } from 'react-redux';
+import store, { persistor } from './src/redux';
 import Loader from './src/helpers/Loader';
 import MainNavigation from './src/routes';
-import {colors} from './src/utils';
+import { colors } from './src/utils';
 // ignore warnings
 LogBox.ignoreAllLogs();
 
@@ -64,6 +64,7 @@ const toastConfig = {
 };
 
 const App = () => {
+ 
   return (
     <Wrapper>
       <GestureHandlerRootView style={styles.container}>
@@ -86,7 +87,7 @@ const App = () => {
 
 export default App;
 
-const Wrapper = ({children}) => {
+const Wrapper = ({ children }) => {
   if (Platform.OS === 'ios')
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding">

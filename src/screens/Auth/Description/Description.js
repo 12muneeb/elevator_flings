@@ -101,16 +101,17 @@ export class Description extends Component {
           intention: selected,
           looking_for: selected1,
           interests: interests,
+
           education: selected2,
           career: career,
           weight: weight,
           height: height,
           networth: networth,
         }
+        console.log('Description1',payload)
         NavService.navigate('Descriptions', {
           data: payload
         })
-      
       }
     }
 
@@ -237,6 +238,7 @@ export class Description extends Component {
                 <CustomTextInput
                   placeholder={'Career'}
                   value={career}
+                  containerStyle={{width:'100%'}}
                   keyboardType={'numeric'}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
@@ -244,6 +246,7 @@ export class Description extends Component {
                 />
               <CustomTextInput
                   placeholder={'Weight'}
+                  containerStyle={{width:'100%'}}
                   value={weight}
                   keyboardType={'numeric'}
                   placeholderColor={colors.lightGray}
@@ -253,6 +256,7 @@ export class Description extends Component {
                     <CustomTextInput
                   placeholder={'Height'}
                   value={height}
+                  containerStyle={{width:'100%'}}
                   keyboardType={'numeric'}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
@@ -261,6 +265,7 @@ export class Description extends Component {
                      <CustomTextInput
                   placeholder={'Networth'}
                   value={networth}
+                  containerStyle={{width:'100%'}}
                   keyboardType={'numeric'}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}

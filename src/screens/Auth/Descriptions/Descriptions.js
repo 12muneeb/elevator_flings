@@ -113,12 +113,12 @@ export class Descriptions extends Component {
                     ethnicity: selected5,
                     salary_bracket: selected6,
                 }
-                // console.log('objectsds', payload)
+                console.log('Description2', payload)
                 const formdata = new FormData();
                 Object.keys(payload).forEach((item) => {
                    return formdata.append(item, payload[item])
                 })
-                // console.log('formdaJSSJJSta==', formdata);
+                console.log('formdaJSSJJSta==', formdata);
                 this.props.completeProfile(formdata)
                 //    NavService.navigate()
 
@@ -133,6 +133,7 @@ export class Descriptions extends Component {
                         <View style={{ gap: 15, marginTop: 15 }}>
                         <CustomTextInput
                   placeholder={'Body type'}
+                  containerStyle={{width:'100%'}}
                   value={bodytype}
                   keyboardType={'default'}
                   placeholderColor={colors.lightGray}
@@ -141,6 +142,7 @@ export class Descriptions extends Component {
                 />
                    <CustomTextInput
                   placeholder={'Hair color'}
+                  containerStyle={{width:'100%'}}
                   value={haircolor}
                   keyboardType={'default'}
                   placeholderColor={colors.lightGray}
@@ -149,6 +151,7 @@ export class Descriptions extends Component {
                 />
                     <CustomTextInput
                   placeholder={'Eye Color'}
+                  containerStyle={{width:'100%'}}
                   value={eyecolor}
                   keyboardType={'default'}
                   placeholderColor={colors.lightGray}

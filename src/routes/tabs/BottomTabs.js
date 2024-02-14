@@ -5,6 +5,7 @@ import {colors} from '../../utils';
 
 //Screens
 import Home from '../../screens/Main/Home';
+import Profile from '../../screens/Main/Profile';
 
 
 const Tab = createBottomTabNavigator();
@@ -21,6 +22,8 @@ export default UserAppStack = () => {
         tabBar={props => <TabBar {...props} />}
         initialRouteName={'Home'}>
         <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Profile" component={Profile} />
+
  
       </Tab.Navigator>
     </>

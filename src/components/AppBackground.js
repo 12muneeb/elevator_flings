@@ -33,7 +33,7 @@ function AppBackground({
 }) {
   const currentUser = useSelector(({authReducer}) => authReducer?.user);
   return (
-    <View style={{flex: 1, backgroundColor: colors.white}}>
+    <View style={{flex: 1, backgroundColor: colors.black}}>
       <View
         style={{
           marginTop: getStatusBarHeight() * 1.4,
@@ -106,8 +106,8 @@ function AppBackground({
             <Text
               style={{
                 ...appStyles.font16,
-                ...appStyles.family_SofiaPro_Regular,
-                color: colors.black,
+                ...appStyles.family_SofiaPro_Bold,
+                color: colors.lightGray,
               }}>
               {title}
             </Text>

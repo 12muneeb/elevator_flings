@@ -8,6 +8,8 @@ import Home from '../../screens/Main/Home';
 const Stack = createNativeStackNavigator();
 
 const AppNavigation = () => {
+  let reduxData = useSelector((state) => state)
+  console.log('reduxData', reduxData);
   return (
     <>
       <Stack.Navigator

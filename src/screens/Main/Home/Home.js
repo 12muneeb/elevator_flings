@@ -5,7 +5,7 @@ import AppBackground from '../../../components/AppBackground'
 export class Home extends Component {
   render() {
     return (
-    <AppBackground title={'Hello'} menu></AppBackground>
+    <AppBackground title={'Hello'} ></AppBackground>
 
     )
   }

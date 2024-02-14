@@ -365,8 +365,8 @@ function* completeProfile() {
         callRequest,
         COMPLETE_PROFILE,
         payload,
-        '',
-        '',
+        // '',
+        // '',
         {},
         ApiSauce,
       );
@@ -378,6 +378,7 @@ function* completeProfile() {
           });
           yield put(toggleVerificationPopUp(true));
         } else {
+          console.log('response.dataresponse.data', response.data);
           yield put(loginUser(response.data));
           yield put(saveTokenForLoginUser(response?.bearer_token));
         }

@@ -66,7 +66,8 @@ export default function CustomTextInput(props) {
             height: multiline ? 150 : 50,
             marginVertical: 0,
             backgroundColor: colors.gray,
-            height:55
+            height:55,
+            width:'90%'
 
           },
           containerStyle,
