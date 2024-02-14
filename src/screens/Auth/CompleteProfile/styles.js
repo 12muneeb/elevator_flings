@@ -116,7 +116,8 @@ const styles = StyleSheet.create({
 
 
   mainCont: {
-    marginHorizontal:16
+    marginHorizontal:16,
+    maxHeight:60
   },
   documentContainer: {
     width: 85,
@@ -133,6 +134,7 @@ const styles = StyleSheet.create({
   },
   documentText: {
     fontSize: 16,
+    color:colors.lightGray
   },
   closeIconCont: {
     borderRadius: 50,
