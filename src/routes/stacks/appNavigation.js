@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useSelector} from 'react-redux';
 import UserAppStack from '../tabs/BottomTabs';
 import Home from '../../screens/Main/Home';
+import EditProfile from '../../screens/Main/EditProfile';
 
 
 const Stack = createNativeStackNavigator();
@@ -24,6 +25,8 @@ const AppNavigation = () => {
         }}>
         <Stack.Screen name="UserAppStack" component={UserAppStack} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
+
        
       </Stack.Navigator>
    

@@ -8,7 +8,8 @@ const ProfileImage = ({
   innerAsset = false,
   name = ' ',
   style,
-  viewStyle
+  viewStyle,
+  imagesize
 }) => {
   if (imageUri)
     return (
@@ -16,11 +17,11 @@ const ProfileImage = ({
         style={[{
           marginTop: 20,
           backgroundColor: colors.primary,
-          height: 130,
-          width: 130,
+          height:  imagesize ? 55 : 130,
+          width: imagesize ? 55 : 130,
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: 72.5,
+          borderRadius:75
         },viewStyle]}>
         <Image
           source={innerAsset ? imageUri : {uri: imageUri}}
@@ -29,6 +30,7 @@ const ProfileImage = ({
               width: size,
               height: size,
               borderRadius: 70,
+              resizeMode:'cover'
             },
             style,
           ]}

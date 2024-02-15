@@ -110,4 +110,6 @@ export const appIcons = {
   rightArrow: require('../assets/icons/rightArrow.png'),
   downArrow: require('../assets/icons/downArrow.png'),
   location: require('../assets/icons/location.png'),
+  add:require('../assets/icons/add.png'),
+  arrow:require('../assets/icons/arrow.png'),
 };

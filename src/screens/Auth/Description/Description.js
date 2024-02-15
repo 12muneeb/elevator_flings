@@ -100,7 +100,7 @@ export class Description extends Component {
           ...data,
           intention: selected,
           looking_for: selected1,
-          interests: interests,
+          interests: JSON.stringify(interests),
 
           education: selected2,
           career: career,

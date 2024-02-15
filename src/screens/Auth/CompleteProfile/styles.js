@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     fontSize: size.xxsmall,
   },
   imageBtn: {
-    width: 370,
+    width: '100%',
     height: 130,
     borderRadius: 10,
     alignItems: 'center',

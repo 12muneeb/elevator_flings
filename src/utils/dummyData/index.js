@@ -1,11 +1,11 @@
-import {Linking} from 'react-native';
-import {appIcons, appImages} from '../../assets';
+import { Linking } from 'react-native';
+import { appIcons, appImages } from '../../assets';
 import NavService from '../../helpers/NavService';
 export const categoriesData = ['Nike Revolution', 'Addidas', 'Skecher'];
 export const colorData = ['black', 'orange', 'red'];
 export const sizeData = ['40', '41', '42', '43', '44', '45'];
-export const Data1 = [{id:1, title: 'Loreum Ipsum',subtitle:'Education'},{id:2, title: 'Loreum Ipsum',subtitle:'Career'},{id:3, title: 'Loreum Ipsum',subtitle:'Career'},]
-export const Data2 = [{id:1, title: 'Loreum Ipsum',subtitle:'Height'},{id:2, title: 'Loreum Ipsum',subtitle:'Hair Color'},{id:3, title: 'Loreum Ipsum',subtitle:'Eye Color'},]
+export const Data1 = [{ id: 1, title: 'Loreum Ipsum', subtitle: 'Education' }, { id: 2, title: 'Loreum Ipsum', subtitle: 'Career' }, { id: 3, title: 'Loreum Ipsum', subtitle: 'Career' },]
+export const Data2 = [{ id: 1, title: 'Loreum Ipsum', subtitle: 'Height' }, { id: 2, title: 'Loreum Ipsum', subtitle: 'Hair Color' }, { id: 3, title: 'Loreum Ipsum', subtitle: 'Eye Color' },]
 
 export const homeData = [
   {
@@ -69,14 +69,14 @@ export const chats = [
     title: 'Amelia',
     desc: 'Accept Your Request',
     desc2: 'Its a Match',
-    desc3:'Great idea',
+    desc3: 'Great idea',
     image: appImages.profile,
     time: '5:45 pm',
   },
   {
     title: 'Amelia',
     desc: 'Accept Your Request',
-    desc3:'Great idea',
+    desc3: 'Great idea',
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Views your profile!',
@@ -84,12 +84,12 @@ export const chats = [
   {
     title: 'Amelia',
     desc: 'Accept Your Request',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Lorem ipsum dolor',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
   },
   {
@@ -98,7 +98,7 @@ export const chats = [
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Its a Match',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
   },
   {
@@ -107,7 +107,7 @@ export const chats = [
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Its a Match',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
   },
   {
@@ -116,7 +116,7 @@ export const chats = [
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Lorem ipsum dolor',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
   },
   {
@@ -125,7 +125,7 @@ export const chats = [
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Lorem ipsum dolor',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
   },
   {
@@ -134,7 +134,7 @@ export const chats = [
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Views your profile!',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
   },
   {
@@ -142,7 +142,7 @@ export const chats = [
     desc: 'Accept Your Request',
     image: appImages.profile,
     time: '5:45 pm',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
     desc2: 'Views your profile!',
   },
@@ -152,7 +152,7 @@ export const chats = [
     image: appImages.profile,
     time: '5:45 pm',
     desc2: 'Views your profile!',
-    desc3:'Great idea',
+    desc3: 'Great idea',
 
   },
 ];
@@ -176,13 +176,13 @@ export const social = [
   {
     link: 'https://facebook.com',
     image: appIcons.fb,
-    images:appIcons.fbdark,
+    images: appIcons.fbdark,
     onPress: () => Linking.openURL('https://facebook.com'),
   },
   {
     link: 'https://instgram.com',
     image: appIcons.instalink,
-    images:appIcons.instadark,
+    images: appIcons.instadark,
     onPress: () => Linking.openURL('https://instgram.com'),
 
 
@@ -190,9 +190,9 @@ export const social = [
   {
     link: 'https://linkdin.com',
     image: appIcons.linkedinlink,
-    images:appIcons.linkedin,
+    images: appIcons.linkedin,
     onPress: () => Linking.openURL('https://linkdin.com'),
-    
+
 
   },
 ];
@@ -275,14 +275,14 @@ export const community = [
     time: '1 min ago',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit suscipit commodo enim tellus.',
     image: appIcons.thumb1,
-    btn:appIcons.dots
+    btn: appIcons.dots
   },
   {
     name: 'Sara Smith',
     time: '1 min ago',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit suscipit commodo enim tellus.',
     image: appIcons.thumb3,
-    play:appIcons.play
+    play: appIcons.play
 
   },
   {
@@ -409,9 +409,9 @@ export const Reason = [
   },
 ];
 export const packages = [
-  {title: 'Beginner', price: '$ 10.00'},
-  {title: 'Beginner', price: '$ 20.00'},
-  {title: 'Premium', price: '$ 30.00'},
+  { title: 'Beginner', price: '$ 10.00' },
+  { title: 'Beginner', price: '$ 20.00' },
+  { title: 'Premium', price: '$ 30.00' },
 ];
 export const pendings = [
   {
@@ -609,97 +609,49 @@ export const chat = [
 export const Blockdata = [
   {
     id: 1,
-    title: 'Amelia',
-    desc: 'Accept Your Request',
+    title: 'Name,26',
+    desc: 'Basic info',
     image: appImages.profile,
     time: '5:45 pm',
   },
   {
     id: 2,
-    title: 'Salena',
-    desc: 'Accept Your Request',
+    title: 'Education',
+    desc: 'Add Your work',
     image: appImages.profile,
     time: '5:45 pm',
   },
   {
     id: 3,
-    title: 'Salena',
-    desc: 'Accept Your Request',
+    title: 'Bio',
+    desc: 'Add a bio introduce Your self',
     image: appImages.profile,
     time: '5:45 pm',
   },
-  {
-    id: 4,
-    title: 'Salena',
-    desc: 'Accept Your Request',
-    image: appImages.profile,
-    time: '5:45 pm',
-  },
-  {
-    id: 5,
-    title: 'Amelia',
-    desc: 'Accept Your Request',
-    image: appImages.profile,
-    time: '5:45 pm',
-  },
-  {
-    id: 6,
-    title: 'Salena',
-    desc: 'Accept Your Request',
-    image: appImages.profile,
-    time: '5:45 pm',
-  },
-  {
-    id: 7,
-    title: 'Amelia',
-    desc: 'Accept Your Request',
-    image: appImages.profile,
-    time: '5:45 pm',
-  },
-  {
-    id: 8,
-    title: 'Salena',
-    desc: 'Accept Your Request',
-    image: appImages.profile,
-    time: '5:45 pm',
-  },
-  {
-    id: 9,
-    title: 'Salena',
-    desc: 'Accept Your Request',
-    image: appImages.profile,
-    time: '5:45 pm',
-  },
-  {
-    id: 10,
-    title: 'Salena',
-    desc: 'Accept Your Request',
-    image: appImages.profile,
-    time: '5:45 pm',
-  },
+
 ];
 export const Link = [
   {
-    id:1,
+    id: 1,
     name: 'Facebook',
     image: appIcons.facebook,
     titlecolor: '#1674EA',
-    tintColor:'#1674EA',
+    tintColor: '#1674EA',
   },
   {
-    id:2,
+    id: 2,
     name: 'Whatsapp',
     image: appIcons.whatsapp,
     titlecolor: '#1EC55D',
   },
   {
-    id:3,
+    id: 3,
     name: 'Gmail',
     image: appIcons.mail,
     titlecolor: '#FF2020',
   },
   {
-    id:4,
+    id: 4,
     name: 'Twitter',
     image: appIcons.twitter,
     titlecolor: '#00A7E7',
@@ -710,10 +662,10 @@ export const Profiledata = [
     link: appImages.editEvent1,
   },
   {
-    link:  appImages.editEvent2,
+    link: appImages.editEvent2,
   },
   {
-    link:  appImages.editEvent3,
+    link: appImages.editEvent3,
   },
 ];
 export const matchData = [
@@ -745,7 +697,6 @@ export const matchData = [
 export const Banner = [
   {
     image: appImages.editEvent1,
-    text: '1/3',
   },
   {
     image: appImages.editEvent2,

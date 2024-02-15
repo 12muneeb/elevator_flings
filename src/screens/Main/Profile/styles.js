@@ -146,7 +146,6 @@ export const styles = StyleSheet.create({
     formarginhorizontal: {
       marginHorizontal: 5,
       backgroundColor:colors.gray,
-      borderWidth:1,
       borderColor:'#36393F',
       borderRadius:22,
       padding:10,
@@ -222,13 +221,14 @@ export const styles = StyleSheet.create({
     },
     imagescroll: {
       ...Shadows.shadow5,
+      gap:5
     },
     imgbgscroll: {
       width: 100,
       height: 100,
-      marginHorizontal: 5,
       alignItems: 'center',
       justifyContent: 'center',
+   marginHorizontal:5
     },
     heart: {
       width: 10,
@@ -308,4 +308,25 @@ export const styles = StyleSheet.create({
       fontFamily: family.RedHatDisplay_Light,
       marginLeft: 8,
     },
+    img:
+      {width:25,height:25,position: 'absolute',right:10,top:10},
+      tagtxt: {
+        color: colors.white,
+        fontFamily: family.RedHatDisplay_Medium,
+        fontSize: size.tiny,
+      },
+    
+      tag: {
+        paddingHorizontal: 12,
+        margin: 2,
+        borderRadius: 18,
+        alignItems: 'center',
+        flexDirection: 'row',
+        paddingVertical: 8,
+        backgroundColor: '#321F33',
+        borderWidth: 3,
+        borderColor: colors.primary
+    
+      },
+    
 })
