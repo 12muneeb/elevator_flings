@@ -87,7 +87,7 @@ class Profile extends Component {
 
                     contentContainerStyle={{ paddingBottom: 80 }}>
                     <View style={styles.formarginhorizontal}>
-                        <View style={{ alignSelf: 'center', height: 325 }}>
+                      <View style={{ alignSelf: 'center', height: 325 }}> 
                             <Carousel
                                 ref={c => {
                                     this._carousel = c;
@@ -99,7 +99,7 @@ class Profile extends Component {
                                 itemWidth={width - 44}
                             />
 
-                        </View>
+                        </View> 
                         <View style={styles.viewStyle1}>
                             <Text style={styles.txtstyle1}>
                                 {userData.full_name}
@@ -131,9 +131,9 @@ class Profile extends Component {
 
                                 </View>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 10, marginTop: 10 }}>
-                                    <CustomText text='Education' />
-                                    <CustomText text='Career' />
-                                    <CustomText text='Career' />
+                                    <CustomText text='Education' color={colors.white} />
+                                    <CustomText text='Career' color={colors.white}  />
+                                    <CustomText text='Career' color={colors.white}  />
                                 </View>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 10, marginTop: 10 }}>
                                     <View style={styles.tag}>
@@ -154,9 +154,9 @@ class Profile extends Component {
 
                                 </View>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 10, marginTop: 10 }}>
-                                    <CustomText text='Height' />
-                                    <CustomText text='Hair Color' />
-                                    <CustomText text='Eye Color' />
+                                    <CustomText text='Height' color={colors.white}  />
+                                    <CustomText text='Hair Color' color={colors.white}  />
+                                    <CustomText text='Eye Color' color={colors.white} />
                                 </View>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 10, marginTop: 10 }}>
                                     <View style={styles.tag}>

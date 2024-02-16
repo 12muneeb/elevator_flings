@@ -33,21 +33,12 @@ const Listed = ({item, current, pending, unblock,onSubmit,onPress,Accepted,Cance
           </Text>
         </View>
       </View>
-      {current && (
-        <View style={styles.toggle}>
-      
-    
-        </View>
-      )}
-    
-      {unblock && (
         <TouchableOpacity
           style={styles.cancel}
           activeOpacity={0.8}
           onPress={onSubmit}>
           <Img local={true} resizeMode={'contain'} src={appIcons.arrow}  style={{width:15,height:15}}/>
         </TouchableOpacity>
-      )}
     </TouchableOpacity>
   );
 };

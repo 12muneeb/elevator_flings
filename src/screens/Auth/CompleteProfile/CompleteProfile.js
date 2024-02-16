@@ -36,25 +36,36 @@ class CompleteProfile extends Component {
     try {
       const result = await DocumentPicker.pick({
         type: [DocumentPicker.types.images],
-        allowMultiSelection:true,
-        mode:'open',
+        allowMultiSelection: true,
+        mode: 'open',
       });
-      result.forEach((item, index) => {
-       
-        let updatedName = `Img_${index + 1}`;
-        const documentObject = {
+  
+      const totalImages = this.state.galleryDocuments.length + result.length;
+  
+      if (totalImages < 3 || totalImages > 10) {
+        Toast.show({
+          text1: 'Please select between 3 and 10 images.',
+          type: 'error',
+          visibilityTime: 3000,
+        });
+        return;
+      }
+  
+      const newDocuments = result.map((item, index) => {
+        const updatedName = `Img_${this.state.documentCount + index}`;
+        return {
           uri: item.uri,
           type: item?.type,
           tempType: 'photo',
           showName: updatedName,
           name: item.name,
         };
-        this.setState(prevState => ({
-          galleryDocuments: [...prevState.galleryDocuments, documentObject],
-          documentCount: prevState.documentCount + 1,
-        }));
-        console.log('objectfgfg', documentObject);
       });
+  
+      this.setState((prevState) => ({
+        galleryDocuments: [...prevState.galleryDocuments, ...newDocuments],
+        documentCount: prevState.documentCount + newDocuments.length,
+      }));
     } catch (err) {
       if (DocumentPicker.isCancel(err)) {
         // User cancelled the document picker
@@ -62,14 +73,6 @@ class CompleteProfile extends Component {
         // Handle other errors
       }
     }
-  };
-
-  removeDocument = documentId => {
-    this.setState(prevState => ({
-      galleryDocuments: prevState.galleryDocuments.filter(
-        document => document.id !== documentId,
-      ),
-    }));
   };
 
   showDatePicker = () => {
@@ -125,13 +128,17 @@ class CompleteProfile extends Component {
           gender: selected,
           date_of_birth: Dob,
           about: about,
-          // profile_image: bussinessProfileImage
-          //   ? { uri: bussinessProfileImage.path, name: 'profile_image.jpg',}
-          //   : null,
-          //   uploads: galleryDocuments.map(doc => ({
-          //   uri: doc.uri || '',
-          //   name: doc.name || '',
-          // })),
+          profile_image: bussinessProfileImage
+          ? {
+              uri: bussinessProfileImage.path,
+              name: 'profile_image.jpg',
+              type: bussinessProfileImage.mime,
+            }
+          : null,
+            uploads: galleryDocuments.map(doc => ({
+            uri: doc.uri || '',
+            name: doc.name || '',
+          })),
         }
         console.log('completeproifle', payload)
         NavService.navigate('Description', {

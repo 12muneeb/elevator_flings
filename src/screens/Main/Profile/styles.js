@@ -149,6 +149,7 @@ export const styles = StyleSheet.create({
       borderColor:'#36393F',
       borderRadius:22,
       padding:10,
+      borderWidth:2
     },
     uplaodbtn: {
       backgroundColor: colors.secondary,

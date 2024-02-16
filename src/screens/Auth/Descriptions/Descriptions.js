@@ -33,14 +33,21 @@ export class Descriptions extends Component {
         const { bodytype, haircolor, eyecolor, selected, selected2, selected3, selected4, selected5, selected6 } = this?.state
         const { data } = this.props.route.params
         const piercingData = [
-            { key: '0', value: 'Gold' },
-            { key: '1', value: 'Ear' },
+            { key: '0', value: 'Piercing needles' },
+            { key: '1', value: 'Forceps' },
         ];
         const TatoosData = [
-            { key: '0', value: 'Gold' },
-            { key: '1', value: 'Ear' },
+            { key: '0', value: 'Yes' },
+            { key: '1', value: 'No' },
         ];
-
+       const ethhencity = [
+        { key: '0', value: 'Language' },
+        { key: '1', value: 'Diet' },
+       ]
+       const salarybracket = [
+        { key: '0', value: '100k' },
+        { key: '1', value: '200k' },
+       ]
         const onSubmit = () => {
             if (!bodytype) {
                 Toast.show({
@@ -118,7 +125,7 @@ export class Descriptions extends Component {
                 Object.keys(payload).forEach((item) => {
                    return formdata.append(item, payload[item])
                 })
-                console.log('formdaJSSJJSta==', formdata);
+                console.log('formdaJSSJJSta', formdata);
                 this.props.completeProfile(formdata)
                 //    NavService.navigate()
 
@@ -136,6 +143,7 @@ export class Descriptions extends Component {
                   containerStyle={{width:'100%'}}
                   value={bodytype}
                   keyboardType={'default'}
+                  maxLength={10}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
                   onChangeText={value => this.setState({ bodytype: value })}
@@ -145,6 +153,7 @@ export class Descriptions extends Component {
                   containerStyle={{width:'100%'}}
                   value={haircolor}
                   keyboardType={'default'}
+                  maxLength={10}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
                   onChangeText={value => this.setState({ haircolor: value })}
@@ -154,6 +163,7 @@ export class Descriptions extends Component {
                   containerStyle={{width:'100%'}}
                   value={eyecolor}
                   keyboardType={'default'}
+                  maxLength={10}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
                   onChangeText={value => this.setState({ eyecolor: value })}
@@ -253,10 +263,10 @@ export class Descriptions extends Component {
                             />
                             <SelectList
                                 setSelected={selected5 =>
-                                    this.setState({ selected5: TatoosData[selected5]?.value })
+                                    this.setState({ selected5: ethhencity[selected5]?.value })
                                 }
                                 fontFamily={family.SofiaProBold}
-                                data={TatoosData}
+                                data={ethhencity}
                                 arrowicon={
                                     <Img
                                         local
@@ -276,10 +286,10 @@ export class Descriptions extends Component {
                             />
                             <SelectList
                                 setSelected={selected6 =>
-                                    this.setState({ selected6: TatoosData[selected6]?.value })
+                                    this.setState({ selected6: salarybracket[selected6]?.value })
                                 }
                                 fontFamily={family.SofiaProBold}
-                                data={TatoosData}
+                                data={salarybracket}
                                 arrowicon={
                                     <Img
                                         local

@@ -116,7 +116,7 @@ export class Description extends Component {
     }
 
     return (
-      <CustomBackground showLogo={false} titleText={'Descriptions'} skip>
+      <CustomBackground showLogo={false} titleText={'Descriptions'} >
         <View style={[styles.container, { marginTop: 80 }]}>
           <View style={{ gap: 15, marginHorizontal: 20 }}>
             <SelectList
@@ -239,7 +239,8 @@ export class Description extends Component {
                   placeholder={'Career'}
                   value={career}
                   containerStyle={{width:'100%'}}
-                  keyboardType={'numeric'}
+                  keyboardType={'default'}
+                  maxLength={15}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
                   onChangeText={value => this.setState({ career: value })}
@@ -249,6 +250,8 @@ export class Description extends Component {
                   containerStyle={{width:'100%'}}
                   value={weight}
                   keyboardType={'numeric'}
+                  maxLength={3}
+
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
                   onChangeText={value => this.setState({ weight: value })}
@@ -258,6 +261,7 @@ export class Description extends Component {
                   value={height}
                   containerStyle={{width:'100%'}}
                   keyboardType={'numeric'}
+                  maxLength={3}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
                   onChangeText={value => this.setState({ height: value })}
@@ -267,6 +271,7 @@ export class Description extends Component {
                   value={networth}
                   containerStyle={{width:'100%'}}
                   keyboardType={'numeric'}
+                  maxLength={3}
                   placeholderColor={colors.lightGray}
                   inputStyle={{ color: colors.lightGray }}
                   onChangeText={value => this.setState({ networth: value })}
